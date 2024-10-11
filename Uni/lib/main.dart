@@ -1,8 +1,20 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:uni/home/home_main.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:uni/cubit/uni_cubit.dart';
+import 'package:uni/firebase_options.dart';
+import 'package:uni/screens/bottom_nav_bar.dart';
+import 'package:uni/screens/home/home_main.dart';
+import 'package:uni/screens/signPages/auth_screen.dart';
+import 'package:uni/screens/signPages/signin.dart';
+import 'package:uni/screens/signPages/signup.dart';
+import 'package:uni/services/uni_service.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  //UniService().getUni();
   runApp(const MyApp());
 }
 
@@ -14,13 +26,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: MainHome(),
+      //home: AuthScreen(),
+      //multi bloc provider
+      home: BlocProvider(create: (context) => UniCupit(),
+      child: AuthScreen(),),
     );
   }
 }

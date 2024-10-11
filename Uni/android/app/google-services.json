@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "536841467374",
+    "project_id": "usearch-ba127",
+    "storage_bucket": "usearch-ba127.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536841467374:android:5f119fa83d1fac5776caff",
+        "android_client_info": {
+          "package_name": "com.example.uni"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMnGTtilqQZmMSk5dF3_lSIeIGZYlAEeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
