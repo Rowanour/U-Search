@@ -39,7 +39,7 @@ class SignUpPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: Dimensions.height60), // Space from top
+              SizedBox(height: Dimensions.height60),
               Center(child: BigText(text: 'Sign Up', size: 30)),
               SizedBox(height: Dimensions.height30),
               SmallText(text: 'Email'),

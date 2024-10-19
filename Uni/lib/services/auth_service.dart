@@ -50,7 +50,7 @@ class AuthServices {
 
 
 
-  void logout() {
-    FirebaseAuth.instance.signOut();
+  void logout(BuildContext context)async {
+    await FirebaseAuth.instance.signOut();
   }
 }

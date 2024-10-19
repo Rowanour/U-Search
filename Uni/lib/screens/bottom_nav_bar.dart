@@ -6,6 +6,8 @@ import 'package:uni/screens/profile.dart';
 import 'package:uni/utils/colors.dart';
 import 'package:uni/utils/dimensions.dart';
 
+import 'match.dart';
+
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
 
@@ -21,13 +23,15 @@ class _BottomNavBarState extends State<BottomNavBar> {
   late Favorite fav;
   late MainHome home;
   late Profile profile;
+  late UniMatch match;
 
   @override
   void initState() {
     home = MainHome();
     fav = Favorite();
+    match = UniMatch();
     profile = Profile();
-    pages = [home, fav, profile];
+    pages = [home, fav, match, profile];
     super.initState();
   }
 
@@ -48,6 +52,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
           Icon(Icons.home, color: AppColors.navy),
           Icon(
             Icons.favorite,
+            color: AppColors.navy,
+          ),
+          Icon(
+            Icons.compare_arrows,
             color: AppColors.navy,
           ),
           Icon(

@@ -152,24 +152,26 @@ class _SlideState extends State<Slide> {
                                   SizedBox(height: Dimensions.height5),
                                   SmallText(text: uni.description), // Dynamic description
                                   SizedBox(height: Dimensions.height10),
-                                  Row(
-                                    children: [
-                                      IconAndText(
-                                        icon: Icons.format_list_numbered,
-                                        text: "Ranking",
-                                        iconColor: AppColors.inv,
-                                      ),
-                                      IconAndText(
-                                        icon: Icons.location_pin,
-                                        text: uni.location, // Dynamic location
-                                        iconColor: AppColors.inv,
-                                      ),
-                                      IconAndText(
-                                        icon: Icons.star,
-                                        text: "Rating",
-                                        iconColor: AppColors.inv,
-                                      ),
-                                    ],
+                                  Expanded(
+                                    child: Row(
+                                      children: [
+                                        IconAndText(
+                                          icon: Icons.format_list_numbered,
+                                          text: "Ranking: ${uni.id}", // Dynamic ranking
+                                          iconColor: AppColors.inv,
+                                        ),
+                                        /*IconAndText(
+                                          icon: Icons.location_pin,
+                                          text: uni.location, // Dynamic location
+                                          iconColor: AppColors.inv,
+                                        ),*/
+                                        // IconAndText(
+                                        //   icon: Icons.star,
+                                        //   text: "Rating",
+                                        //   iconColor: AppColors.inv,
+                                        // ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
@@ -233,9 +235,10 @@ class _SlideState extends State<Slide> {
               ),
               child: Column(
                 children: [
+                  SizedBox(height: Dimensions.height10),
                   BigText(text: uni.name), // Dynamic name
                   SizedBox(height: Dimensions.height10),
-                  Row(
+                  /*Row(
                     children: [
                       Wrap(
                         children: List.generate(
@@ -252,7 +255,7 @@ class _SlideState extends State<Slide> {
                       SizedBox(width: Dimensions.width10),
                       SmallText(text: "100 ratings", color: AppColors.navy),
                     ],
-                  ),
+                  ),*/
                   SizedBox(height: Dimensions.height10),
                   Center(
                     child: Row(
@@ -260,7 +263,7 @@ class _SlideState extends State<Slide> {
                       children: [
                         IconAndText(
                           icon: Icons.format_list_numbered,
-                          text: "Ranking",
+                          text: "Ranking: ${uni.id}", // Dynamic ranking
                           iconColor: AppColors.teal,
                         ),
                         IconAndText(

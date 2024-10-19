@@ -53,33 +53,6 @@ class SignInPage extends StatelessWidget {
               ),
               SizedBox(height: Dimensions.height40),
           
-              Center(
-                child: Container(
-                  width: double.infinity,
-                  height: Dimensions.height40,
-                  child: SignInButton(
-                    Buttons.Google,
-                    text: "Sign in with Google",
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(Dimensions.radius30),
-                    ),
-                    padding: EdgeInsets.all(Dimensions.height10),
-                    onPressed: () {
-                      // Implement Google sign-in logic here
-                    },
-                  ),
-                ),
-              ),
-          
-              /*Center(
-                child: GestureDetector(
-                  onTap: () {
-                    // Forgot password navigation
-                  },
-                  child:
-                      SmallText(text: 'Forgot Password?', color: AppColors.teal),
-                ),
-              ),*/
               SizedBox(height: Dimensions.height20),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
